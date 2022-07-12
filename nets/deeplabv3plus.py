@@ -25,11 +25,11 @@ class AtrousConvMobileNetV2(nn.Module):
                 # apply()遍历 model 中所有的模块，并对每个模块应用 partial 函数
                 self.features.apply(
                     # partial()用来扩展函数
-                    partial(func=self._nostride_dilate, dilate=2)
+                    partial(self._nostride_dilate, dilate=2)
                 )
             for i in range(self.down_idx[-1], self.total_idx):
                 self.features[i].apply(
-                    partial(func=self._nostride_dilate, dilate=4)
+                    partial(self._nostride_dilate, dilate=4)
                 )
         elif downsample_factor == 16:
             for i in range(self.down_idx[-1], self.total_idx):
