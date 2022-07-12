@@ -13,7 +13,7 @@ class AtrousConvMobileNetV2(nn.Module):
         model = MobileNetV2(num_classes=1000)
         # print(*[(name, param.shape) for name, param in model.named_parameters()])
         model.load_state_dict(
-            torch.load('D:\dev\PycharmProjects\DeepLabV3Plus-Pytorch\model_data\mobilenet_v2-b0353104.pth'),
+            torch.load('../model_data/mobilenet_v2-b0353104.pth'),
             strict=False)
 
         self.features = model.features[:-1]
