@@ -17,8 +17,8 @@ from utils.dice_score import dice_loss
 from nets import DeepLabV3Plus
 from utils.focal_loss import FocalLoss
 
-dir_img = './data/imgs/'
-dir_mask = './data/masks/'
+dir_img = '/kaggle/input/crack-dataset/imgs/'
+dir_mask = '/kaggle/input/crack-dataset/imgs/'
 dir_checkpoint = Path('./checkpoints/')
 
 
