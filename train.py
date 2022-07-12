@@ -18,7 +18,7 @@ from nets import DeepLabV3Plus
 from utils.focal_loss import FocalLoss
 
 dir_img = '/kaggle/input/crack-dataset/imgs/'
-dir_mask = '/kaggle/input/crack-dataset/imgs/'
+dir_mask = '/kaggle/input/crack-dataset/masks/'
 dir_checkpoint = Path('./checkpoints/')
 
 
